@@ -4,9 +4,77 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Multi Step Form</title>
 </head>
 <body>
+  <main>
+    <form data-multi-step>
+      <div data-step class="card">
+        <h1 class="step-title">Create your account</h1>
+        <p class="step-subtitle">Your information to login</p>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Email">
+
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password">
+
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password">
+
+          <button type="button" data-next-step>Next</button>
+        </div>
+      </div>
+      <div data-step class="card">
+        <h1 class="step-title">Social Profiles</h1>
+        <p class="step-subtitle">Your presence on the social network</p>
+        <div class="form-group">
+          <label for="facebook">Facebook</label>
+          <input type="text" name="facebook" id="facebook" placeholder="Facebook">
+
+          <label for="twitter">Twitter</label>
+          <input type="text" name="twitter" id="twitter" placeholder="Twitter">
+
+          <label for="googleplus">Google Plus</label>
+          <input type="text" name="googleplus" id="googleplus" placeholder="Google Plus">
+
+          <div class="buttons-group">
+            <button type="button" data-previous-step>Previous</button>
+            <button type="button" data-next-step>Next</button>
+          </div>
+        </div>
+      </div>
+      <div data-step class="card">
+        <h1 class="step-title">Personal details</h1>
+        <p class="step-subtitle">We will never sell it</p>
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" name="firstname" id="firstname" placeholder="First Name">
+
+          <label for="lastname">Last Name</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" id="phone" placeholder="Phone">
+
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" placeholder="Address">
+
+          <div class="buttons-group">
+            <button type="button" data-previous-step>Previous</button>
+            <button type="submit" data-submit-step>Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
   
+  <script src="./js/index.js"></script>
 </body>
 </html>
